@@ -1,0 +1,40 @@
+﻿<Window x:Class="WeClean.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WeClean"
+        mc:Ignorable="d"
+        Title="WeClean™ Computer Cleaning (PROFESSIONAL LICENSE) 2.14.012" Height="450" Width="800">
+    <Grid Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition/>
+            <RowDefinition Height="55"/>
+        </Grid.RowDefinitions>
+        <Rectangle Fill="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" Margin="0,0,0,0" Grid.ColumnSpan="2" />
+        <Image HorizontalAlignment="Right" Margin="0,0,0,0" Source="Resources/faded-globe.png" Stretch="Uniform" Grid.Row="0" Grid.Column="1" />
+        <Rectangle Stroke="#FFA0A0A0" Margin="0,0,0,0" Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="0" />
+
+        <Button Content="Cancel" Margin="0,0,10.334,9.667" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75" Grid.Row="2" Grid.Column="1" IsCancel="True"/>
+        <Separator Margin="9.333,0,0.334,0" Height="26" VerticalAlignment="Top" Grid.Row="2" Grid.Column="1"/>
+        <Button Content="Clean" Margin="0,0,113.334,9.667" IsEnabled="False" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75" IsDefault="True" Grid.Row="2" Grid.Column="1"/>
+        <Button Content="&lt; Back" Margin="0,0,193.334,9.667" IsEnabled="False" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75" Grid.Row="2" Grid.Column="1"/>
+        <Label Content="WeClean™ Wizard 2.14.012" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Grid.Row="2" Width="154" Foreground="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" Height="26" Grid.ColumnSpan="2" Grid.Column="0" />
+        <Label Content="WeClean™ Computer Cleaning" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Grid.Row="0" FontWeight="Bold" FontSize="14" Grid.ColumnSpan="2" Grid.Column="0" />
+        <Label Content="The program is currently cleaning your files." HorizontalAlignment="Left" Margin="27,39,0,0" VerticalAlignment="Top" Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="0" />
+        <Image HorizontalAlignment="Left" Height="100" Margin="10,10.333,0,0" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" Width="100" Source="Resources/Ncrow-Mega-Pack-1-CCleaner.ico"/>
+        <Label Content="Please wait while WeClean™ is operating on your garbage files." HorizontalAlignment="Left" Margin="9.333,10.333,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label Content="Status:" Grid.Column="1" HorizontalAlignment="Left" Margin="9.333,41.333,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Name="StatusLabel" Content="removing C:/System32/winpx.dll" Grid.Column="1" Margin="46,41,85,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <ProgressBar Grid.Column="1" Height="24" Margin="10,72,85,0" Grid.Row="1" VerticalAlignment="Top" IsIndeterminate="True"/>
+        <ScrollViewer Name="LogScroll" Grid.Column="1" Margin="10,101,85,10" Grid.Row="1" Background="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}">
+            <TextBlock Name="LogBlock" TextWrapping="Wrap" VerticalAlignment="Bottom" Margin="10" />
+        </ScrollViewer>
+
+    </Grid>
+</Window>
